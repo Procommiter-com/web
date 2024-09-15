@@ -1,0 +1,40 @@
+#blocks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+#blocks > .block {
+    display: inline-block;
+    border-radius: .5rem;
+    opacity: 0;
+    animation: blockIdentifier .5s ease-in-out forwards;
+}
+
+#blocks > .block.a {
+    background-color: #29B11C;
+}
+
+#blocks > .block.b {
+    background-color: #488643;
+}
+#blocks > .block.c {
+    background-color: #5EC954;
+}
+#blocks > .block.d {
+    background-color: #555555;
+}
+
+@keyframes blockIdentifier {
+    25% {
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(-20%);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,164 @@
+body {
+    display: flex;
+    gap: 1.5rem;
+    box-sizing: border-box;
+    padding: 1rem;
+}
+
+main {
+    display: grid;
+    gap: 1rem;
+
+    width: 23rem;
+}
+
+main > div {
+    box-sizing: border-box;
+    padding: 1rem 0;
+
+    border-radius: .5rem;
+    background-color: #2C2C2C;
+}
+
+#logo {
+    position: fixed;
+
+    width: 9rem;
+    aspect-ratio: 1/1;
+    bottom: 2rem;
+    right: 2rem;
+}
+
+#identity {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#identity > img {
+    border-radius: .5rem;
+    
+    width: 80%;
+
+    aspect-ratio: 1 / 1;
+    margin-bottom: 1.5rem;
+
+    object-fit: cover;
+}
+
+#identity > h1, #identity > h3 {
+    box-sizing: border-box;
+    width: 80%;
+    margin: 0;
+}
+
+#identity > h3 {
+    color: #A09A9A;
+}
+
+#connections {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+    align-items: center;
+
+    width: 80%;
+    margin: 1rem 1.5rem;
+}
+
+#connections > a > i {
+    font-size: 2.2rem;
+    color: #A09A9A;
+}
+
+#connections > a:hover > i {
+    color: #fff;
+}
+
+#languages {
+    display: flex;
+    flex-flow: column;
+
+    align-items: center;
+    justify-content: center;
+}
+
+#languages > h3 {
+    width: 90%;
+    margin: 0;
+}
+
+#languages > #top {
+    width: 85%;
+}
+
+#languages > #top > h2 > img {
+    float: left;
+
+    width: 2rem;
+    height: 2rem;
+
+    margin-right: 1rem;
+}
+
+#languages > #top > h2 > span {
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+#stacks {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+
+    gap: .5rem;
+}
+
+#stacks > img {
+    border-radius: .2rem;
+    background-color: #575757;
+    padding: .4rem;
+
+    width: 2rem;
+    height: 2rem;
+    aspect-ratio: 1/1;
+
+    object-fit: contain;
+}
+
+section {
+    width: calc(100vw - 26rem);
+    grid-area: b;
+}
+
+.block {
+    width: 1rem;
+    height: 1rem;
+    border-radius: .1rem !important;
+}
+
+@media screen and (max-width: 900px) {
+    body {
+        margin-top: 5rem;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main {
+        width: 30rem;
+    }
+
+    section {
+        width: 90%;
+    }
+
+    #logo {
+        width: 5rem;
+        height: 5rem;
+        top: 1rem;
+        left: 1rem;        
+    }
+}

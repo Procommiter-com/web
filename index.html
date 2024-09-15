@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Procommiter</title>
+        <link rel="stylesheet" href="/css/common.css">
+        <link rel="stylesheet" href="/css/block.css">
+        <style>
+
+            .con {
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                align-items: center;
+                width: 100vw;
+                min-height: 100vh;
+            }
+
+            .award {
+                padding: 1rem;
+                position: relative;
+                border-radius: .5rem;
+                width: 15rem;
+                height: 22rem;
+            }
+
+            .award  * {
+                margin: 0;
+            }
+
+            .award > h2 {
+                font-size: 1.8rem;
+                font-weight: 400;
+            }
+
+            .award > p {
+                color: #D1D1D1;
+            }
+
+            .award > img {
+                margin-bottom: .5rem;
+                border-radius: .5rem;
+                width: 100%;
+                height: 45%;
+
+                object-fit: cover;
+            }
+
+            .award > div {
+                position: absolute;
+                bottom: 1rem;
+                width: calc(100% - 2rem);
+            }
+
+            .award > div > * {
+                text-align: right;
+                color: #D1D1D1;
+            }
+
+            .award.gold {
+                background-color: #29B11C;
+            }
+            .award.sliver {
+                background-color: #488643;
+            }
+            .award.other {
+                background-color: #5ECA55;
+            }
+
+            .profiles {
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                align-items: center;
+
+                padding: 1rem .7rem;
+                border-radius: .5rem;
+
+                width: 15rem;
+                height: 21rem;
+
+                background-color: #2C2C2C;
+            }
+
+            .profiles > * {
+                margin: 0;
+            }
+
+            .profiles > img {
+                margin-bottom: .5rem;
+                border-radius: .5rem;
+
+                height: 55%;
+                aspect-ratio: 1 / 1;
+
+                object-fit: cover;
+            }
+
+            .profiles > p {
+                font-size: 1.1rem;
+                color: #A09A9A;
+            }
+
+            .profiles > h2 {
+                font-size: 1.7rem;
+                font-weight: 500;
+            }
+
+            .profiles > a {
+                display: flex;
+                align-items: flex-end;
+                justify-content: flex-end;
+                flex-grow: .5;
+                font-size: 1.1rem;
+                color: #00BFE9;
+            }
+
+            #blocks > .block {
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+
+
+            #logo {
+                width: 25%;
+            }
+
+            #progress {
+                width: 80%;
+            }
+
+            #progress > h1 > span {
+                font-weight: 400;
+                font-size: 1.2rem;
+                margin-left: .5rem;
+                color: #555555;
+            }
+
+            #awards {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+
+                justify-content: center;
+
+                box-sizing: border-box;
+                padding-top: 5%;
+
+                width: 90vw;
+                min-height: 70vh;
+            }
+
+            #committers {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+
+                box-sizing: border-box;
+                justify-content: center;
+                align-items: center;                
+
+                width: 90vw;
+                min-height: 70vh;
+            }
+
+            @media screen and (max-width: 900px) {
+                #logo {
+                    width: 70vw;
+                }
+
+                .con {
+                    margin: 2rem 0;
+                }
+            }
+        </style>
+        <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="msapplication-TileColor" content="#141414">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <meta name="theme-color" content="#141414">
+    </head>
+    <body>
+        <div id="top" class="con">
+            <img src="imgs/Logo.svg" id="logo">
+            <div id="progress">
+                <h1>2024<span>Progress</span></h1>
+                <div id="blocks"></div>
+            </div>
+        </div>
+
+        <div id="mid" class="con">
+            <h1>Award Records</h1>
+            <div id="awards">
+                <div class="award gold">
+                    <img src="">
+                    <h2>Sunrin IoT Competition</h2>
+                    <p>Awarded by Eunsoo Jung</p>
+                    <div>
+                        <p>2024</p>
+                        <p>(1st place)</p>
+                    </div>
+                </div>
+                <div class="award gold">
+                    <img src="imgs/awards/10thsunrinhackathon.jpg">
+                    <h2>10th Sunrin Hackathon</h2>
+                    <p>Awarded by Eunsoo Jung</p>
+                    <div>
+                        <p>2024</p>
+                        <p>(Gold Award)</p>
+                    </div>
+                </div>
+                <div class="award other">
+                    <img src="imgs/awards/26thappjam.png">
+                    <h2>26th AppJam</h2>
+                    <p>Awarded by Eunsoo Jung</p>
+                    <div>
+                        <p>2024</p>
+                        <p>(Encouragement Award)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="botton" class="con">
+            <h1>Committers</h1>
+            <div id="committers">
+                <div class="profiles">
+                    <img src="imgs/profiles/EunsooJung.png">
+                    <p>@Yellowstrawberrys</p>
+                    <h2>Eunsoo Jung</h2>
+                    <a href="/profiles/yellowstrawberrys/">Profile ↗</a>
+                </div>
+                <div class="profiles">
+                    <img src="imgs/profiles/HanSeokRyu.png">
+                    <p>@kyle-gif</p>
+                    <h2>HanSeok Ryu</h2>
+                    <a href="/profiles/kyle-gif/">Profile ↗</a>
+                </div>
+                <div class="profiles">
+                    <img src="imgs/profiles/HaeChanKim.png">
+                    <p>@khc5308</p>
+                    <h2>HaeChan Kim</h2>
+                    <a href="/profiles/khc5308/">Profile ↗</a>
+                </div>
+                <div class="profiles">
+                    <img src="imgs/profiles/GiJunPark.jpg">
+                    <p>@robedcloud23777</p>
+                    <h2>GiJun Park</h2>
+                    <a href="/profiles/robedcloud23777/">Profile ↗</a>
+                </div>
+            </div>
+        </div>
+        <script>
+            progress()
+
+            function progress() {
+                const blocks = document.querySelector("#blocks");
+                blocks.innerHTML = '';
+
+                const prg = (dayOfYear() / (new Date().getFullYear() % 4 === 0 ? 366 : 365)) * 54;
+                for(let i=0; i<54; i++) {
+                    const ele = document.createElement("span");
+                    ele.style.animationDelay = i*0.1+"s";
+                    if(i < prg) {
+                        ele.className = "block "+randBlock();
+                    }else {
+                        ele.className = "block d";
+                    }
+                    blocks.appendChild(ele);
+                }
+            }
+
+            function randBlock() {
+                let ran = Math.random();
+
+                if(ran < 0.4) {
+                    return "a";
+                }else if(ran < 0.8) {
+                    return "b";
+                }else {
+                    return "c";
+                }
+            }
+
+            function dayOfYear() {
+                const d = new Date();
+                const start = new Date(d.getFullYear(), 0, 0);
+                return ((d - start) + ((start.getTimezoneOffset() - d.getTimezoneOffset()))) / (1000*60*60*24);
+            }
+        </script>
+    </body>
+</html>
